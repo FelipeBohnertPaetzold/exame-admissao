@@ -22,17 +22,15 @@ class Troco
         $nota_atual = ((float) $notas);
         //aqui converto a nota atual para string, ela sera o nome da chave no array
         $posicao_array = ((string) $nota_atual);
-
         //esse laço decrementa o valor até chegar a zero, dessa forma atribuo os valores a partir do foreach
         //evito assim a criacao de uma condicional if para cada chave do array
-        $quantidade_notas = array();
         while($valor >= $nota_atual){
-          $quantidade_notas($posicao_array => $quantidade_notas[$posicao_array] + 1);
+          $qtdeNotas[$posicao_array] ++;
           $valor = sprintf("%f.2", $valor - $nota_atual);
           
         }
       }
-      return $quantidade_notas;
+      return $qtdeNotas;
     }
 
     public function getQtdeNotas($reais)
