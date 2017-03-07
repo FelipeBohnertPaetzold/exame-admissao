@@ -51,6 +51,6 @@ class Troco
         ];
 
         //não costumo colocar muitas funcionalidades na mesma função
-        return $this->calculaReais(((float)$reais), $qtdeNotas);
+        return $this->calculaReais($reais, $qtdeNotas);
     }
 }
